@@ -9,6 +9,4 @@ it("Check default value of slratio", () => {
 it("Check set and get slratio", () => {
     SBE.slratio = 5.42
     expect(SBE.slratio).toEqual(5.42);
-    SBE.slratio = 1.34
-    expect(SBE.slratio).toEqual(5.42);
 });
