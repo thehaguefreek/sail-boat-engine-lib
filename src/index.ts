@@ -55,10 +55,10 @@ export class SailBoatEngine {
     /**
     * Returns hull speed knots
     * @public
-    * @returns {number} hull speed in knots
     * @function
+    * @returns {number} hull speed in knots
     */
-    public hullSpeed() {
+    public hullSpeed(): number {
         return this._slratio * Math.sqrt(this._lwl);
     }
 }
