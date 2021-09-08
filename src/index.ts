@@ -28,9 +28,8 @@ export class SailBoatEngine {
     * @example
     * // Sets a displacement of 9000 LBS
     * SBE.displacement = 9000
-    * @example
-    * // Returns displacement in LBS
-    * const displacement = SBE.displacement
+    *
+    * console.log(SBE.displacement) // returns 9000
     */
     public set displacement(displacement: number) {
         this._displacement = displacement
