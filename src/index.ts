@@ -53,7 +53,7 @@ export class SailBoatEngine {
     }
 
     /**
-    * Returns hull speed knots
+    * Returns hull speed in kts
     * @public
     * @function
     * @returns {number} hull speed in knots
