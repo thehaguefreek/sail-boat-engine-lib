@@ -8,28 +8,21 @@ export class SailBoatEngine {
     private _lwl!: number
 
     /**
-    * Sets the slratio
+    * SL Ratio
     * @public
     * @type {number}
-    * @memberof SailBoatEngine
+    * @default [1.34]
     */
     public set slratio(slratio: number) {
         this._slratio = slratio
     }
 
-    /**
-    * Gets the slratio
-    * @public
-    * @type {number}
-    * @default [1.34]
-    * @memberof SailBoatEngine
-    */
     public get slratio() {
         return this._slratio
     }
 
     /**
-    * Sets the displacement in ft
+    * Displacement in LBS
     * @type {number}
     */
     public set displacement(displacement: number) {
@@ -40,6 +33,10 @@ export class SailBoatEngine {
         return this._displacement
     }
 
+    /**
+    * Length water line in ft
+    * @type {number}
+    */
     public set lwl(lwl: number) {
         this._lwl = lwl
     }
@@ -49,7 +46,7 @@ export class SailBoatEngine {
     }
 
     /**
-    * Sets the displacement in ft
+    * Returns hull speed knots
     * @public
     * @function
     */
