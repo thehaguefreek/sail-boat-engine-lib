@@ -1,8 +1,7 @@
 /**
- * Creates a new sailboat.
- * @constructor
+ * Creates new sailboat
+ * @class SailBoatEngine
  */
-
 export class SailBoatEngine {
     private _slratio = 1.34
     private _displacement!: number
@@ -11,6 +10,8 @@ export class SailBoatEngine {
     /**
     * Sets the slratio
     * @public
+    * @type {number}
+    * @memberof SailBoatEngine
     */
     public set slratio(slratio: number) {
         this._slratio = slratio
@@ -19,11 +20,18 @@ export class SailBoatEngine {
     /**
     * Gets the slratio
     * @public
+    * @type {number}
+    * @default [1.34]
+    * @memberof SailBoatEngine
     */
     public get slratio() {
         return this._slratio
     }
 
+    /**
+    * Sets the displacement in ft
+    * @type {number}
+    */
     public set displacement(displacement: number) {
         this._displacement = displacement
     }
@@ -40,6 +48,11 @@ export class SailBoatEngine {
         return this._lwl
     }
 
+    /**
+    * Sets the displacement in ft
+    * @public
+    * @function
+    */
     public hullSpeed() {
         return this._slratio * Math.sqrt(this._lwl);
     }

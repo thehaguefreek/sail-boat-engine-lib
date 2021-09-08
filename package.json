@@ -35,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/thehaguefreek/sail-boat-engine-lib/issues"
   },
-  "homepage": "https://github.com/thehaguefreek/sail-boat-engine-lib#readme"
+  "homepage": "https://github.com/thehaguefreek/sail-boat-engine-lib#readme",
+  "dependencies": {
+    "jaguarjs-jsdoc": "^1.1.0"
+  }
 }
