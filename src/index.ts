@@ -1,6 +1,7 @@
-/**
- * Creates new sailboat
+/**]
  * @class SailBoatEngine
+ * @example
+ * SBE = new SailBoatEngine()
  */
 export class SailBoatEngine {
     private _slratio = 1.34
@@ -24,6 +25,12 @@ export class SailBoatEngine {
     /**
     * Displacement in LBS
     * @type {number}
+    * @example
+    * // Sets a displacement of 9000 LBS
+    * SBE.displacement = 9000
+    * @example
+    * // Returns displacement in LBS
+    * const displacement = SBE.displacement
     */
     public set displacement(displacement: number) {
         this._displacement = displacement
@@ -48,6 +55,7 @@ export class SailBoatEngine {
     /**
     * Returns hull speed knots
     * @public
+    * @returns {number} hull speed in knots
     * @function
     */
     public hullSpeed() {
