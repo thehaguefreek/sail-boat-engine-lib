@@ -1,4 +1,4 @@
-/**]
+/**
  * @class SailBoatEngine
  * @example
  * SBE = new SailBoatEngine()
