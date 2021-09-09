@@ -17,7 +17,7 @@
   },
   "scripts": {
     "test": "jest --config jestconfig.json",
-    "build": "tsc && jsdoc -c .jsdoc.json lib/index.js",
+    "build": "tsc && jsdoc -c jsdoc.json",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
