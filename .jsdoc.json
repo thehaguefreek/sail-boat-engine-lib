@@ -1,7 +1,15 @@
 {
+  "source": {
+    "include": [
+      "./lib"
+    ],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
   "opts": {
     "recurse": true,
     "private": false,
+    "destination": "./docs/",
     "template": "node_modules/jaguarjs-jsdoc"
   }
 }
