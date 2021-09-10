@@ -5,18 +5,18 @@
  * @example
  * SBE = new ElectricEngine()
  */
-export abstract class ElectricEngine {
+export class ElectricEngine {
     private _ratedpower = 10
     private _maxpower = 10000
     private _voltage = 12
     private _current = 100
 
-    /*
+    /**
      * Voltage in Volt
      * @public
      * @type {number}
      */
-     public set voltage(voltage: number) {
+    public set voltage(voltage: number) {
         this._voltage = voltage
     }
 
@@ -24,7 +24,7 @@ export abstract class ElectricEngine {
         return this._voltage
     }
 
-    /*
+    /**
      * Current in Amps
      * @public
      * @type {number}
