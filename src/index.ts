@@ -1,3 +1,5 @@
+/// <reference path="references.ts" />
+
 /**
  * @class SailBoatEngine
  * @example
@@ -13,7 +15,7 @@ export class SailBoatEngine {
     * @public
     * @type {number}
     * @default [1.34]
-    */
+    */ 
     public set slratio(slratio: number) {
         this._slratio = slratio
     }
