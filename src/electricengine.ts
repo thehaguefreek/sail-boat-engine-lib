@@ -7,7 +7,7 @@
  */
 export class ElectricEngine {
     private _ratedpower = 10
-    private _maxpower = 10000
+    private _maxpower!: number
     private _voltage = 12
     private _current = 100
 
@@ -56,29 +56,11 @@ export class ElectricEngine {
      * @returns {number} Maximum power in KW
      */
     public maxPower(): number {
-        return this._current * this._voltage
+        if (this._maxpower == undefined) {
+            return this._current * this._voltage
+        } else {
+            return this._maxpower
+        }
     }
 
-}
-
-/**
- * @class CombustionEngine
- * @example
- * SBE = new CombustionEngine()
- */
-export class CombustionEngine {
-    private _ratedpower!: number
-
-    /**
-   * Rated power in HP
-   * @public
-   * @type {number}
-   */
-    public set ratedpower(ratedpower: number) {
-        this._ratedpower = ratedpower
-    }
-
-    public get ratedpower() {
-        return this._ratedpower
-    }
 }
