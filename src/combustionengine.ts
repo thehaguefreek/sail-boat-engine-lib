@@ -6,7 +6,7 @@
  * SBE = new CombustionEngine()
  */
 export class CombustionEngine {
-    private _ratedpower!: number
+    #ratedpower!: number
 
     /**
    * Rated power in HP
@@ -14,10 +14,10 @@ export class CombustionEngine {
    * @type {number}
    */
     public set ratedpower(ratedpower: number) {
-        this._ratedpower = ratedpower
+        this.#ratedpower = ratedpower
     }
 
     public get ratedpower() {
-        return this._ratedpower
+        return this.#ratedpower
     }
 }

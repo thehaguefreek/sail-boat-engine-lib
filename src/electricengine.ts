@@ -6,10 +6,10 @@
  * SBE = new ElectricEngine()
  */
 export class ElectricEngine {
-    private _ratedpower = 10
-    private _maxpower!: number
-    private _voltage = 12
-    private _current = 100
+    #ratedpower = 10
+    #maxpower!: number
+    #voltage = 12
+    #current = 100
 
     /**
      * Voltage in Volt
@@ -17,11 +17,11 @@ export class ElectricEngine {
      * @type {number}
      */
     public set voltage(voltage: number) {
-        this._voltage = voltage
+        this.#voltage = voltage
     }
 
     public get voltage() {
-        return this._voltage
+        return this.#voltage
     }
 
     /**
@@ -30,11 +30,11 @@ export class ElectricEngine {
      * @type {number}
      */
     public set current(current: number) {
-        this._current = current
+        this.#current = current
     }
 
     public get current() {
-        return this._current
+        return this.#current
     }
 
     /**
@@ -43,11 +43,11 @@ export class ElectricEngine {
      * @type {number}
      */
     public set ratedpower(ratedpower: number) {
-        this._ratedpower = ratedpower
+        this.#ratedpower = ratedpower
     }
 
     public get ratedpower() {
-        return this._ratedpower
+        return this.#ratedpower
     }
 
     /**
@@ -56,10 +56,10 @@ export class ElectricEngine {
      * @returns {number} Maximum power in KW
      */
     public maxPower(): number {
-        if (this._maxpower == undefined) {
-            return this._current * this._voltage
+        if (this.#maxpower == undefined) {
+            return this.#current * this.#voltage
         } else {
-            return this._maxpower
+            return this.#maxpower
         }
     }
 
