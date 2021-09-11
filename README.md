@@ -4,6 +4,10 @@
 
 <https://thehaguefreek.github.io/sail-boat-engine-lib>
 
+## Github
+
+<https://github.com/thehaguefreek/sail-boat-engine-lib>
+
 ## Install
 
 **SSH**
