@@ -8,7 +8,7 @@
 npm install git+ssh://git@github.com:thehaguefreek/sail-boat-engine-lib.git 
 ```
 
-**http**
+**HTTP**
 
 ```sh
 npm install git+https://github.com/thehaguefreek/sail-boat-engine-lib.git
@@ -22,7 +22,7 @@ npm install git+https://github.com/thehaguefreek/sail-boat-engine-lib.git
 npm upgrade git+ssh://git@github.com:thehaguefreek/sail-boat-engine-lib.git 
 ```
 
-**http**
+**HTTP**
 
 ```sh
 npm upgrade git+https://github.com/thehaguefreek/sail-boat-engine-lib.git
