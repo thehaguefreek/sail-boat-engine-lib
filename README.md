@@ -1,5 +1,9 @@
 # sail-boat-engine-lib
 
+## Documentation
+
+<https://thehaguefreek.github.io/sail-boat-engine-lib>
+
 ## Install
 
 **SSH**
