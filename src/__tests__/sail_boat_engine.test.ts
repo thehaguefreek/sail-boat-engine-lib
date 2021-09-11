@@ -33,7 +33,7 @@ describe('Set Combustion Engine', function () {
     });
 });
 
-test("engines[name] should be ElectricEngine", () => {
-    SBE.engines['electric'].ratedpower = 5
-    expect(SBE.engines['electric'].ratedpower).toBe(5);
+test("Test change value in SBE.engines['electric']", () => {
+    SBE.engines.electric.ratedpower = 5
+    expect(SBE.engines.electric.ratedpower).toBe(5);
 });
