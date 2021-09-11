@@ -6,10 +6,9 @@
  * SBE = new ElectricEngine()
  */
 export class ElectricEngine {
-    #ratedpower = 10
-    #maxpower!: number
-    #voltage = 12
-    #current = 100
+    #ratedpower!: number
+    #voltage: number = 48
+    #current!: number
 
     /**
      * Voltage in Volt
@@ -25,9 +24,10 @@ export class ElectricEngine {
     }
 
     /**
-     * Current in Amps
+     * Maximum current in Amps
      * @public
      * @type {number}
+     * @desc Should be supplied by manufacturer or given by the fuse.
      */
     public set current(current: number) {
         this.#current = current
@@ -51,15 +51,24 @@ export class ElectricEngine {
     }
 
     /**
-     * Maximum power based on voltage and current
+     * Calculates power based on voltage and current
+     * @private
+     * @type {number}
+     */
+    private get calculatedpower() {
+        return ( this.#current * this.#voltage ) / 1000
+    }
+
+    /**
+     * Maximum power based on voltage, current ánd rated power
      * @public
      * @returns {number} Maximum power in KW
      */
     public maxPower(): number {
-        if (this.#maxpower == undefined) {
-            return this.#current * this.#voltage
+        if (this.#ratedpower < this.calculatedpower) {
+            return this.#ratedpower
         } else {
-            return this.#maxpower
+            return this.calculatedpower
         }
     }
 
