@@ -1,3 +1,3 @@
-/// <reference path="index.ts" />
-/// <reference path="electricengine.ts" />
-/// <reference path="combustionengine.ts" />
+/// <reference path="sail_boat_engine.ts" />
+/// <reference path="electric_engine.ts" />
+/// <reference path="combustion_engine.ts" />
