@@ -2,9 +2,18 @@
 
 ## Documentation
 
+### Web
+
 <https://thehaguefreek.github.io/sail-boat-engine-lib>
 
-## Github
+### Command Line
+
+```sh
+# Creates documentation in ./docs
+npm run createdocs
+```
+
+## Github Repository
 
 <https://github.com/thehaguefreek/sail-boat-engine-lib>
 
