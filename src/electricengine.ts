@@ -55,7 +55,7 @@ export class ElectricEngine {
      * @private
      * @type {number}
      */
-    private get calculatedpower() {
+    private get calculatedpower(): number {
         return ( this.#current * this.#voltage ) / 1000
     }
 
@@ -65,6 +65,12 @@ export class ElectricEngine {
      * @returns {number} Maximum power in KW
      */
     public maxPower(): number {
+        if (isNaN(this.calculatedpower)) {
+            return this.#ratedpower
+        }
+        if (isNaN(this.#ratedpower)) {
+            return this.calculatedpower
+        }
         if (this.#ratedpower < this.calculatedpower) {
             return this.#ratedpower
         } else {

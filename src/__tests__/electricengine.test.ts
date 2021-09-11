@@ -1,3 +1,4 @@
+import { SailBoatEngine } from "..";
 import { ElectricEngine } from "../electricengine";
 
 let EE = new ElectricEngine()
@@ -42,3 +43,20 @@ describe('Calculate maximum power from voltage current', function () {
     });
 });
 
+let NoCurrent = new ElectricEngine()
+
+describe('Calculate maximum power without current', function () {
+    test("maxPower() should be 88", () => {
+        NoCurrent.ratedpower = 88
+        expect(NoCurrent.maxPower()).toBe(88);
+    });
+});
+
+let NoRatedPower = new ElectricEngine()
+
+describe('Calculate maximum power without rated power', function () {
+    test("maxPower() should be 19.2", () => {
+        NoRatedPower.current = 400
+        expect(NoRatedPower.maxPower()).toBe(19.2);
+    });
+});
