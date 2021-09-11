@@ -1,5 +1,8 @@
 /// <reference path="references.ts" />
 
+import { CombustionEngine } from "./combustionengine"
+import { ElectricEngine } from "./electricengine"
+
 /**
  * @class SailBoatEngine
  * @example
@@ -9,7 +12,7 @@ export class SailBoatEngine {
     #slratio = 1.34
     #displacement!: number
     #lwl!: number
-    #engines!: {[key: string]: [] }
+    public engines: { [name: string]: ElectricEngine|CombustionEngine } = {}
 
     /**
     * SL Ratio
@@ -62,9 +65,5 @@ export class SailBoatEngine {
     */
     public hullSpeed(): number {
         return this.#slratio * Math.sqrt(this.#lwl);
-    }
-
-    public setEngine(name: string, engine: []) {
-        this.#engines[name] = engine
     }
 }
