@@ -21,6 +21,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Build
+      uses: andstor/jsdoc-action@v1
+      with:
+        config_file: jsdoc.json
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
