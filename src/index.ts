@@ -9,6 +9,7 @@ export class SailBoatEngine {
     #slratio = 1.34
     #displacement!: number
     #lwl!: number
+    #engines!: {[key: string]: [] }
 
     /**
     * SL Ratio
@@ -61,5 +62,9 @@ export class SailBoatEngine {
     */
     public hullSpeed(): number {
         return this.#slratio * Math.sqrt(this.#lwl);
+    }
+
+    public setEngine(name: string, engine: []) {
+        this.#engines[name] = engine
     }
 }
