@@ -1,4 +1,4 @@
-import { SailBoatEngine } from "../sail_boat_engine";
+import { SailBoat } from "../sail_boat";
 import { ElectricEngine } from "../electric_engine";
 
 let EE = new ElectricEngine()

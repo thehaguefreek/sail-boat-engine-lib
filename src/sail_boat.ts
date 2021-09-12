@@ -4,11 +4,11 @@ import { CombustionEngine } from "./combustion_engine"
 import { ElectricEngine } from "./electric_engine"
 
 /**
- * @class SailBoatEngine
+ * @class SailBoat
  * @example
- * SBE = new SailBoatEngine()
+ * SBE = new SailBoat()
  */
-export class SailBoatEngine {
+export class SailBoat {
     #slratio = 1.34
     #displacement!: number
     #lwl!: number

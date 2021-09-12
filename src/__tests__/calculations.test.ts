@@ -1,6 +1,6 @@
-import { SailBoatEngine } from "../sail_boat_engine";
+import { SailBoat } from "../sail_boat";
 
-let SBE = new SailBoatEngine()
+let SBE = new SailBoat()
 SBE.lwl = 36
 
 it("Calculate hullspeed", () => {
