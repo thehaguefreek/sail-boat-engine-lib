@@ -1,8 +1,5 @@
 /// <reference path="references.ts" />
 
-import { CombustionEngine } from "./combustion_engine"
-import { ElectricEngine } from "./electric_engine"
-
 /**
  * @class SailBoat
  * @example
