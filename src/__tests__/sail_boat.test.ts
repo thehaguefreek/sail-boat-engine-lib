@@ -45,7 +45,9 @@ describe('Get Combustion Engine', function () {
     });
 });
 
-test("Test change value in sailboat.engines['electric']", () => {
-    sailboat.engines.electric.ratedpower = 5
-    expect(sailboat.engines.electric.ratedpower).toBe(5);
+// Check default voltage of electric engine
+describe('Check default value of sailboat.engines.electric.voltage', function () {
+    test("Test change value in sailboat.engines['electric']", () => {
+        expect(sailboat.engines.electric.voltage).toBe(48);
+    });
 });

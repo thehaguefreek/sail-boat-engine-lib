@@ -3,7 +3,8 @@
 /**
  * @class CombustionEngine
  * @example
- * sailboat = new CombustionEngine()
+ * // Adds 'Kromhout' combustion engine to sailboat
+ * sailboat.engines['Kromhout'] = new CombustionEngine()
  */
 export class CombustionEngine {
     #ratedpower!: number

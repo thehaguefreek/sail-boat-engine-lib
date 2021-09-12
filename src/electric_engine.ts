@@ -3,7 +3,8 @@
 /**
  * @class ElectricEngine
  * @example
- * sailboat = new ElectricEngine()
+ * // Add electric engine to your sailboat
+ * sailboat.engines['my-electric-engine-name'] = new ElectricEngine()
  */
 export class ElectricEngine {
     #ratedpower!: number

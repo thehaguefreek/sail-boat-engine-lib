@@ -12,14 +12,28 @@ export class SailBoat {
     #slratio = 1.34
     #displacement!: number
     #lwl!: number
-    public engines: { [name: string]: ElectricEngine|CombustionEngine } = {}
+
+    /**
+     * @namespace
+     * @property {string} my_engine_1                   - Name of engine 1
+     * @property {object} my_engine_1.ElectricEngine    - Type of engine
+     * @property {string} my_engine_2                   - Name of engine 2
+     * @property {object} my_engine_2.CombustionEngine  - Type of engine
+     * @property {string} my_engine_..
+     * @returns {object}                            - Object with engines
+     * @example
+     * // Add an electric engine to SailBoat#engines
+     * sailboat = new Sailboat()
+     * sailboat.engines['my-engine-name'] = new ElectricEngine()
+     */ 
+    public engines: { [name: string|number]: any } = {}
 
     /**
     * SL Ratio
     * @public
     * @type {number}
     * @default [1.34]
-    */ 
+    */
     public set slratio(slratio: number) {
         this.#slratio = slratio
     }
