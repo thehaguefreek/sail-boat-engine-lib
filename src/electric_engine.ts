@@ -3,7 +3,7 @@
 /**
  * @class ElectricEngine
  * @example
- * SBE = new ElectricEngine()
+ * sailboat = new ElectricEngine()
  */
 export class ElectricEngine {
     #ratedpower!: number

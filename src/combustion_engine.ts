@@ -3,7 +3,7 @@
 /**
  * @class CombustionEngine
  * @example
- * SBE = new CombustionEngine()
+ * sailboat = new CombustionEngine()
  */
 export class CombustionEngine {
     #ratedpower!: number

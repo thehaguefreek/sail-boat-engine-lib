@@ -6,7 +6,7 @@ import { ElectricEngine } from "./electric_engine"
 /**
  * @class SailBoat
  * @example
- * SBE = new SailBoat()
+ * sailboat = new SailBoat()
  */
 export class SailBoat {
     #slratio = 1.34
@@ -33,9 +33,9 @@ export class SailBoat {
     * @type {number}
     * @example
     * // Sets a displacement of 9000 LBS
-    * SBE.displacement = 9000
+    * sailboat.displacement = 9000
     *
-    * console.log(SBE.displacement) // returns 9000
+    * console.log(sailboat.displacement) // returns 9000
     */
     public set displacement(displacement: number) {
         this.#displacement = displacement
