@@ -20,6 +20,20 @@ describe('Check set and get slratio', function () {
     });
 });
 
+describe('Check set and get displacement', function () {
+    test("displacement should be 10000", () => {
+        sailboat.displacement = 10000
+        expect(sailboat.displacement).toBe(10000);
+    });
+});
+
+describe('Check set and get length water line', function () {
+    test("length water line should be 36", () => {
+        sailboat.lwl = 36
+        expect(sailboat.lwl).toBe(36);
+    });
+});
+
 // Test hull speed
 describe('Calculate hullspeed', function () {
     test("Hull speed of 36ft boat should be 8.04", () => {
