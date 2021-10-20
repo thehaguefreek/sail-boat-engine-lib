@@ -2,6 +2,7 @@
  * ```js
  * // Example
  * sailboat = new SailBoat()
+ * ```
  */
 export class SailBoat {
     #slratio = 1.34
@@ -14,6 +15,7 @@ export class SailBoat {
      * // Add an electric engine to SailBoat#engines
      * sailboat = new Sailboat()
      * sailboat.engines['my-engine-name'] = new ElectricEngine()
+     * ```
      */
     public engines: { [name: string | number]: any } = {}
 
@@ -36,6 +38,7 @@ export class SailBoat {
      * sailboat.displacement = 9000
      *
      * console.log(sailboat.displacement) // returns 9000
+     * ```
      */
     public set displacement(displacement: number) {
         this.#displacement = displacement
