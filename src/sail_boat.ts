@@ -5,8 +5,9 @@
  * ```
  */
 export class SailBoat {
-    #slratio = 1.34
+    /** @ignore */
     #displacement!: number
+    /** @ignore */
     #lwl!: number
 
     /**
@@ -22,13 +23,7 @@ export class SailBoat {
     /**
      * SL Ratio
      */
-    public set slratio(slratio: number) {
-        this.#slratio = slratio
-    }
-
-    public get slratio() {
-        return this.#slratio
-    }
+    slratio:number = 1.34
 
     /**
      * Displacement in LBS
@@ -63,6 +58,6 @@ export class SailBoat {
      * Returns hull speed in kts
      */
     public hullSpeed(): number {
-        return this.#slratio * Math.sqrt(this.#lwl);
+        return this.slratio * Math.sqrt(this.#lwl);
     }
 }
