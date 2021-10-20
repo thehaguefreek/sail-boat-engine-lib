@@ -1,7 +1,6 @@
-import { SailBoat } from "../sail_boat";
-import { CombustionEngine } from "../combustion_engine";
+import * as SailBoatEngine from '../index'
 
-let CE = new CombustionEngine()
+let CE = new SailBoatEngine.CombustionEngine()
 
 describe('Set and get rated power', function () {
     test("ratedpower should be 10", () => {

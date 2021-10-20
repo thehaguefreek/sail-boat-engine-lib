@@ -1,7 +1,6 @@
-import { SailBoat } from "../sail_boat";
-import { ElectricEngine } from "../electric_engine";
+import * as SailBoatEngine from '../index'
 
-let EE = new ElectricEngine()
+let EE = new SailBoatEngine.ElectricEngine()
 
 describe('Default voltage', function () {
     test("Voltage should be 48", () => {
@@ -43,7 +42,7 @@ describe('Calculate maximum power from voltage current', function () {
     });
 });
 
-let NoCurrent = new ElectricEngine()
+let NoCurrent = new SailBoatEngine.ElectricEngine()
 
 describe('Calculate maximum power without current', function () {
     test("maxPower() should be 88", () => {
@@ -52,7 +51,7 @@ describe('Calculate maximum power without current', function () {
     });
 });
 
-let NoRatedPower = new ElectricEngine()
+let NoRatedPower = new SailBoatEngine.ElectricEngine()
 
 describe('Calculate maximum power without rated power', function () {
     test("maxPower() should be 19.2", () => {

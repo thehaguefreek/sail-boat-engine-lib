@@ -1,10 +1,8 @@
-import { SailBoat } from "../sail_boat";
-import { CombustionEngine } from "../combustion_engine";
-import { ElectricEngine } from "../electric_engine";
+import * as SailBoatEngine from '../index'
 
 // Check default values
 
-let sailboat = new SailBoat()
+let sailboat = new SailBoatEngine.SailBoat()
 describe('Check default value of slratio', function () {
     test("slratio should be 1.34", () => {
         expect(sailboat.slratio).toBe(1.34);
@@ -44,18 +42,18 @@ describe('Calculate hullspeed', function () {
 });
 
 // Add Engines
-sailboat.engines['electric'] = new ElectricEngine()
-sailboat.engines['combustion'] = new CombustionEngine()
+sailboat.engines['electric'] = new SailBoatEngine.ElectricEngine()
+sailboat.engines['combustion'] = new SailBoatEngine.CombustionEngine()
 
 describe('Get Electric Engine', function () {
     test("engines[name] should be ElectricEngine", () => {
-        expect(sailboat.engines['electric']).toStrictEqual(new ElectricEngine());
+        expect(sailboat.engines['electric']).toStrictEqual(new SailBoatEngine.ElectricEngine());
     });
 });
 
 describe('Get Combustion Engine', function () {
     test("engines[name] should be CombustionEngine", () => {
-        expect(sailboat.engines['combustion']).toStrictEqual(new CombustionEngine());
+        expect(sailboat.engines['combustion']).toStrictEqual(new SailBoatEngine.CombustionEngine());
     });
 });
 

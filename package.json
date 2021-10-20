@@ -1,6 +1,6 @@
 {
   "name": "sail-boat-engine",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Gives you the speed and radius of a sailboat with a certain electric/diesel engine",
   "main": "SailBoat.js",
   "directories": {
@@ -13,6 +13,7 @@
     "ts-jest": "^27.0.5",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
+    "typedoc": "^0.22.6",
     "typescript": "^4.3.5"
   },
   "scripts": {
@@ -25,7 +26,7 @@
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
-    "createdocs": "jsdoc -c jsdoc.json"
+    "createdocs": "typedoc"
   },
   "repository": {
     "type": "git",
@@ -38,7 +39,6 @@
   },
   "homepage": "https://thehaguefreek.github.io/sail-boat-engine-lib",
   "dependencies": {
-    "ci": "^2.1.1",
-    "jaguarjs-jsdoc": "^1.1.0"
+    "ci": "^2.1.1"
   }
 }

@@ -1,19 +1,16 @@
-/// <reference path="references.ts" />
-
 /**
- * @class CombustionEngine
- * @example
+ * ```js
+ * // Example
  * // Adds 'Kromhout' combustion engine to sailboat
  * sailboat.engines['Kromhout'] = new CombustionEngine()
+ * ```
  */
 export class CombustionEngine {
     #ratedpower!: number
 
     /**
-   * Rated power in HP
-   * @public
-   * @type {number}
-   */
+     * Rated power in HP
+     */
     public set ratedpower(ratedpower: number) {
         this.#ratedpower = ratedpower
     }

@@ -1,8 +1,6 @@
-/// <reference path="references.ts" />
-
 /**
- * @class ElectricEngine
- * @example
+ * ```js
+ * // Example
  * // Add electric engine to your sailboat
  * sailboat.engines['my-electric-engine-name'] = new ElectricEngine()
  */
@@ -13,8 +11,6 @@ export class ElectricEngine {
 
     /**
      * Voltage in Volt
-     * @public
-     * @type {number}
      */
     public set voltage(voltage: number) {
         this.#voltage = voltage
@@ -26,9 +22,6 @@ export class ElectricEngine {
 
     /**
      * Maximum current in Amps
-     * @public
-     * @type {number}
-     * @desc Should be supplied by manufacturer or given by the fuse.
      */
     public set current(current: number) {
         this.#current = current
@@ -40,8 +33,6 @@ export class ElectricEngine {
 
     /**
      * Rated power in KW
-     * @public
-     * @type {number}
      */
     public set ratedpower(ratedpower: number) {
         this.#ratedpower = ratedpower
@@ -53,8 +44,6 @@ export class ElectricEngine {
 
     /**
      * Calculates power based on voltage and current
-     * @private
-     * @type {number}
      */
     private get calculatedpower(): number {
         return ( this.#current * this.#voltage ) / 1000
@@ -62,8 +51,6 @@ export class ElectricEngine {
 
     /**
      * Maximum power based on voltage, current ánd rated power
-     * @public
-     * @returns {number} Maximum power in KW
      */
     public maxPower(): number {
         if (isNaN(this.calculatedpower)) {

@@ -36,9 +36,9 @@ jobs:
       - run: npm run build --prod --if-present
       - run: npm test
       - name: Create Documentation
-        uses: andstor/jsdoc-action@v1
+        uses: TypeStrong/typedoc-action@v1
         with:
-          config_file: jsdoc.json
+          config_file: typedoc.json
 
       - name: Prepare tag
         id: prepare_tag
