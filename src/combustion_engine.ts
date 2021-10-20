@@ -6,7 +6,7 @@
  * ```
  */
 export class CombustionEngine {
-/** @ignore */
+    /** @ignore */
     #ratedpower!: number
 
     /**
