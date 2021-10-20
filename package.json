@@ -1,6 +1,6 @@
 {
   "name": "sail-boat-engine",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Gives you the speed and radius of a sailboat with a certain electric/diesel engine",
   "main": "SailBoat.js",
   "directories": {
