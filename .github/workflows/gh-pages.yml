@@ -35,10 +35,7 @@ jobs:
       - run: npm ci
       - run: npm run build --prod --if-present
       - run: npm test
-      - name: Create Documentation
-        uses: TypeStrong/typedoc-action@v1
-        with:
-          config_file: typedoc.json
+      - run: npm run createdocs
 
       - name: Prepare tag
         id: prepare_tag
