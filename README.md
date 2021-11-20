@@ -44,3 +44,26 @@ npm upgrade git+ssh://git@github.com:thehaguefreek/sail-boat-engine-lib.git
 ```sh
 npm upgrade git+https://github.com/thehaguefreek/sail-boat-engine-lib.git
 ```
+
+## Consuming sail-boat-engine-lib
+
+### Bundle.js
+
+#### HTML
+
+```html
+<html>
+<head>
+</head>
+<body>
+    <!-- HTML code goes here -->
+    <!-- Include JS -->
+    <script src="path/to/sail-boat-engine-lib/lib/bundle.js"></script>
+</body>
+</html>
+```
+#### JS
+
+```js
+const SB = new window.SailBoatEngine.SailBoat();
+```
