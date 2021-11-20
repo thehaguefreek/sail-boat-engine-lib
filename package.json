@@ -16,13 +16,14 @@
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "typedoc": "^0.22.6",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "uglify-js": "^3.14.3"
   },
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc && npm run bundle",
     "watch": "tsc-watch --onSuccess 'npm run bundle'",
-    "bundle": "browserify ./lib/index.js --standalone SailBoatEngine > ./lib/bundle.js",
+    "bundle": "browserify --debug ./lib/index.js --standalone SailBoatEngine | uglifyjs > ./lib/bundle.js",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
