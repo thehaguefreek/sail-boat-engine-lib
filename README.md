@@ -33,16 +33,8 @@ npm install git+https://github.com/thehaguefreek/sail-boat-engine-lib.git
 
 ## Upgrade
 
-**SSH**
-
 ```sh
-npm upgrade git+ssh://git@github.com:thehaguefreek/sail-boat-engine-lib.git 
-```
-
-**HTTP**
-
-```sh
-npm upgrade git+https://github.com/thehaguefreek/sail-boat-engine-lib.git
+npm upgrade sail-boat-engine-lib
 ```
 
 ## Consuming sail-boat-engine-lib
