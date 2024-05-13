@@ -1,8 +1,8 @@
 {
-  "name": "sail-boat-engine",
+  "name": "yacht-propulsion-metrics",
   "version": "0.0.1",
   "description": "Gives you the speed and radius of a sailboat with a certain electric/diesel engine",
-  "main": "SailBoat.js",
+  "main": "Yacht.js",
   "directories": {
     "lib": "lib"
   },
@@ -23,7 +23,7 @@
     "test": "jest --config jestconfig.json",
     "build": "tsc && npm run bundle",
     "watch": "tsc-watch --onSuccess 'npm run bundle'",
-    "bundle": "browserify --debug ./lib/index.js --standalone SailBoatEngine | uglifyjs > ./lib/bundle.js",
+    "bundle": "browserify --debug ./lib/index.js --standalone YachtPropulsionMetrics | uglifyjs > ./lib/bundle.js",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
@@ -35,14 +35,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/thehaguefreek/sail-boat-engine-lib.git"
+    "url": "git+ssh://git@github.com/thehaguefreek/yacht-propulsion-metrics-lib.git"
   },
   "author": "Freek Olgers",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/thehaguefreek/sail-boat-engine-lib/issues"
+    "url": "https://github.com/thehaguefreek/yacht-propulsion-metrics-lib/issues"
   },
-  "homepage": "https://thehaguefreek.github.io/sail-boat-engine-lib",
+  "homepage": "https://thehaguefreek.github.io/yacht-propulsion-metrics-lib",
   "dependencies": {
     "ci": "^2.1.1"
   }

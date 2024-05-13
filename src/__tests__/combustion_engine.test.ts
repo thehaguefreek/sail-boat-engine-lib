@@ -1,6 +1,6 @@
-import * as SailBoatEngine from '../index'
+import * as YachtPropulsionMetrics from '../index'
 
-let CE = new SailBoatEngine.CombustionEngine()
+let CE = new YachtPropulsionMetrics.CombustionEngine()
 
 describe('Set and get rated power', function () {
     test("ratedpower should be 10", () => {

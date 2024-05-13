@@ -1,10 +1,10 @@
 /**
  * ```js
  * // Example
- * sailboat = new SailBoat()
+ * sailboat = new Yacht()
  * ```
  */
-export class SailBoat {
+export class Yacht {
     /** @ignore */
     #displacement!: number
     /** @ignore */
@@ -13,7 +13,7 @@ export class SailBoat {
     /**
      * ```js
      * // Example
-     * // Add an electric engine to SailBoat#engines
+     * // Add an electric engine to Yacht#engines
      * sailboat = new Sailboat()
      * sailboat.engines['my-engine-name'] = new ElectricEngine()
      * ```

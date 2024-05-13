@@ -1,6 +1,6 @@
-import * as SailBoatEngine from '../index'
+import * as YachtPropulsionMetrics from '../index'
 
-let EE = new SailBoatEngine.ElectricEngine()
+let EE = new YachtPropulsionMetrics.ElectricEngine()
 
 describe('Default voltage', function () {
     test("Voltage should be 48", () => {
@@ -42,7 +42,7 @@ describe('Calculate maximum power from voltage current', function () {
     });
 });
 
-let NoCurrent = new SailBoatEngine.ElectricEngine()
+let NoCurrent = new YachtPropulsionMetrics.ElectricEngine()
 
 describe('Calculate maximum power without current', function () {
     test("maxPower() should be 88", () => {
@@ -51,7 +51,7 @@ describe('Calculate maximum power without current', function () {
     });
 });
 
-let NoRatedPower = new SailBoatEngine.ElectricEngine()
+let NoRatedPower = new YachtPropulsionMetrics.ElectricEngine()
 
 describe('Calculate maximum power without rated power', function () {
     test("maxPower() should be 19.2", () => {

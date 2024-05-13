@@ -1,10 +1,10 @@
-# sail-boat-engine-lib
+# yacht-propulsion-metrics-lib
 
 ## Documentation
 
 ### Web
 
-<https://thehaguefreek.github.io/sail-boat-engine-lib>
+<https://thehaguefreek.github.io/yacht-propulsion-metrics-lib>
 
 ### Command Line
 
@@ -15,29 +15,29 @@ npm run createdocs
 
 ## Github Repository
 
-<https://github.com/thehaguefreek/sail-boat-engine-lib>
+<https://github.com/thehaguefreek/yacht-propulsion-metrics-lib>
 
 ## Install
 
 **SSH**
 
 ```sh
-npm install git+ssh://git@github.com:thehaguefreek/sail-boat-engine-lib.git 
+npm install git+ssh://git@github.com:thehaguefreek/yacht-propulsion-metrics-lib.git 
 ```
 
 **HTTP**
 
 ```sh
-npm install git+https://github.com/thehaguefreek/sail-boat-engine-lib.git
+npm install git+https://github.com/thehaguefreek/yacht-propulsion-metrics-lib.git
 ```
 
 ## Upgrade
 
 ```sh
-npm upgrade sail-boat-engine-lib
+npm upgrade yacht-propulsion-metrics-lib
 ```
 
-## Consuming sail-boat-engine-lib
+## Consuming yacht-propulsion-metrics-lib
 
 ### Bundle.js
 
@@ -50,12 +50,12 @@ npm upgrade sail-boat-engine-lib
 <body>
     <!-- HTML code goes here -->
     <!-- Include JS -->
-    <script src="path/to/sail-boat-engine-lib/lib/bundle.js"></script>
+    <script src="path/to/yacht-propulsion-metrics-lib/lib/bundle.js"></script>
 </body>
 </html>
 ```
 #### JS
 
 ```js
-const SB = new window.SailBoatEngine.SailBoat();
+const SB = new window.YachtPropulsionMetrics.Yacht();
 ```
