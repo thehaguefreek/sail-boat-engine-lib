@@ -6,9 +6,14 @@
  * ```
  */
 export class ElectricEngine {
-    #ratedpower!: number
+    #ratedPowerKW!: number
     #voltage: number = 48
     #current!: number
+    #type = 'electric'
+
+    public getType() {
+        return this.#type
+    }
 
     /**
      * Voltage in Volt
@@ -35,18 +40,18 @@ export class ElectricEngine {
     /**
      * Rated power in KW
      */
-    public set ratedpower(ratedpower: number) {
-        this.#ratedpower = ratedpower
+    public set ratedPowerKW(ratedPowerKW: number) {
+        this.#ratedPowerKW = ratedPowerKW
     }
 
-    public get ratedpower() {
-        return this.#ratedpower
+    public get ratedPowerKW() {
+        return this.#ratedPowerKW
     }
 
     /**
      * Calculates power based on voltage and current
      */
-    private get calculatedpower(): number {
+    private get calculatedPowerKW(): number {
         return ( this.#current * this.#voltage ) / 1000
     }
 
@@ -54,16 +59,16 @@ export class ElectricEngine {
      * Maximum power based on voltage, current ánd rated power
      */
     public maxPower(): number {
-        if (isNaN(this.calculatedpower)) {
-            return this.#ratedpower
+        if (isNaN(this.calculatedPowerKW)) {
+            return this.#ratedPowerKW
         }
-        if (isNaN(this.#ratedpower)) {
-            return this.calculatedpower
+        if (isNaN(this.#ratedPowerKW)) {
+            return this.calculatedPowerKW
         }
-        if (this.#ratedpower < this.calculatedpower) {
-            return this.#ratedpower
+        if (this.#ratedPowerKW < this.calculatedPowerKW) {
+            return this.#ratedPowerKW
         } else {
-            return this.calculatedpower
+            return this.calculatedPowerKW
         }
     }
 

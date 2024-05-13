@@ -6,17 +6,23 @@
  * ```
  */
 export class CombustionEngine {
+    #type = 'combustion'
+
+    public getType() {
+        return this.#type
+    }
+
     /** @ignore */
-    #ratedpower!: number
+    #ratedPowerHP!: number
 
     /**
      * Rated power in HP
      */
-    public set ratedpower(ratedpower: number) {
-        this.#ratedpower = ratedpower
+    public set ratedPowerHP(ratedPowerHP: number) {
+        this.#ratedPowerHP = ratedPowerHP
     }
 
-    public get ratedpower() {
-        return this.#ratedpower
+    public get ratedPowerHP() {
+        return this.#ratedPowerHP
     }
 }

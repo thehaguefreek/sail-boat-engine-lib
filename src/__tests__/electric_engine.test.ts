@@ -23,13 +23,13 @@ describe('Set and get current', function () {
 });
 
 describe('Set and get rated power', function () {
-    test("ratedpower should be 10", () => {
-        EE.ratedpower = 10
-        expect(EE.ratedpower).toBe(10);
+    test("ratedPower should be 10", () => {
+        EE.ratedPowerKW = 10
+        expect(EE.ratedPowerKW).toBe(10);
     });
 });
 
-describe('Calculate maximum power from ratedpower', function () {
+describe('Calculate maximum power from ratedPower', function () {
     test("maxPower() should be 4.8", () => {
         expect(EE.maxPower()).toBe(4.8);
     });
@@ -37,7 +37,7 @@ describe('Calculate maximum power from ratedpower', function () {
 
 describe('Calculate maximum power from voltage current', function () {
     test("maxPower() should be 14.4", () => {
-        EE.ratedpower = 2
+        EE.ratedPowerKW = 2
         expect(EE.maxPower()).toBe(2);
     });
 });
@@ -46,7 +46,7 @@ let NoCurrent = new YachtPropulsionMetrics.ElectricEngine()
 
 describe('Calculate maximum power without current', function () {
     test("maxPower() should be 88", () => {
-        NoCurrent.ratedpower = 88
+        NoCurrent.ratedPowerKW = 88
         expect(NoCurrent.maxPower()).toBe(88);
     });
 });
