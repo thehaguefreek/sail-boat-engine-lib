@@ -7,9 +7,13 @@
  */
 export class ElectricEngine {
     #ratedPowerKW!: number
-    #voltage: number = 48
+    #voltage!: number
     #current!: number
-    #type = 'electric'
+    #type: 'electric'
+
+    public constructor() {
+        this.#type = 'electric'
+    }
 
     public getType() {
         return this.#type

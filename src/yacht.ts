@@ -1,3 +1,6 @@
+import { CombustionEngine } from "./combustion_engine"
+import { ElectricEngine } from "./electric_engine"
+
 /**
  * ```js
  * // Example
@@ -18,12 +21,17 @@ export class Yacht {
      * sailboat.engines['my-engine-name'] = new ElectricEngine()
      * ```
      */
-    public engines: { [name: string | number]: any } = {}
+    public engines: (ElectricEngine | CombustionEngine)[]
 
     /**
      * SL Ratio
      */
-    slratio:number = 1.34
+    public slRatio:number
+
+    public constructor() {
+        this.engines = []
+        this.slRatio = 1.34
+    }
 
     /**
      * Displacement in LBS
@@ -57,7 +65,7 @@ export class Yacht {
     /**
      * Returns hull speed in kts
      */
-    public hullSpeed(): number {
-        return this.slratio * Math.sqrt(this.#lwl);
+    public getHullSpeed(): number {
+        return this.slRatio * Math.sqrt(this.#lwl);
     }
 }
