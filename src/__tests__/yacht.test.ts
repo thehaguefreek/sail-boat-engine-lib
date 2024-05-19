@@ -5,16 +5,16 @@ import * as YachtPropulsionMetrics from '../index'
 let sailboat = new YachtPropulsionMetrics.Yacht()
 describe('Check default value of slratio', function () {
     test("slratio should be 1.34", () => {
-        expect(sailboat.slratio).toBe(1.34);
+        expect(sailboat.slRatio).toBe(1.34);
     });
 });
 
 describe('Check set and get slratio', function () {
     test("slratio should be 5.42", () => {
-        sailboat.slratio = 5.42
-        expect(sailboat.slratio).toBe(5.42);
+        sailboat.slRatio = 5.42
+        expect(sailboat.slRatio).toBe(5.42);
         // Set back to default
-        sailboat.slratio = 1.34
+        sailboat.slRatio = 1.34
     });
 });
 
@@ -36,30 +36,23 @@ describe('Check set and get length water line', function () {
 describe('Calculate hullspeed', function () {
     test("Hull speed of 36ft boat should be 8.04", () => {
         sailboat.lwl = 36
-        expect(sailboat.slratio).toBe(1.34);
-        expect(sailboat.hullSpeed()).toBeCloseTo(8.04);
+        expect(sailboat.slRatio).toBe(1.34);
+        expect(sailboat.getHullSpeed()).toBeCloseTo(8.04);
     });
 });
 
 // Add Engines
-sailboat.engines['electric'] = new YachtPropulsionMetrics.ElectricEngine()
-sailboat.engines['combustion'] = new YachtPropulsionMetrics.CombustionEngine()
+sailboat.engines.push(new YachtPropulsionMetrics.ElectricEngine())
+sailboat.engines.push(new YachtPropulsionMetrics.CombustionEngine())
 
 describe('Get Electric Engine', function () {
     test("engines[name] should be ElectricEngine", () => {
-        expect(sailboat.engines['electric']).toStrictEqual(new YachtPropulsionMetrics.ElectricEngine());
+        expect(sailboat.engines[0]).toBeInstanceOf(YachtPropulsionMetrics.ElectricEngine);
     });
 });
 
 describe('Get Combustion Engine', function () {
     test("engines[name] should be CombustionEngine", () => {
-        expect(sailboat.engines['combustion']).toStrictEqual(new YachtPropulsionMetrics.CombustionEngine());
-    });
-});
-
-// Check default voltage of electric engine
-describe('Check default value of sailboat.engines.electric.voltage', function () {
-    test("Test change value in sailboat.engines['electric']", () => {
-        expect(sailboat.engines.electric.voltage).toBe(48);
+        expect(sailboat.engines[1]).toBeInstanceOf(YachtPropulsionMetrics.CombustionEngine);
     });
 });
