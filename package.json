@@ -1,6 +1,6 @@
 {
-  "name": "yacht-propulsion-metrics",
-  "version": "0.0.1",
+  "name": "@f3k-tech/yacht-propulsion-metrics",
+  "version": "0.0.2",
   "description": "Gives you the speed and radius of a sailboat with a certain electric/diesel engine",
   "main": "Yacht.js",
   "directories": {
