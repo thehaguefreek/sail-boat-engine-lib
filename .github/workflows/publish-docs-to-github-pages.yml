@@ -8,7 +8,7 @@
 # deploy-v1.2.3  # Tag on the gh-pages branch
 # v1.2.3         # Tag on the main branch
 
-name: Publish Docs Tto Github Pages
+name: Publish Docs To Github Pages
 
 on:
   push:
